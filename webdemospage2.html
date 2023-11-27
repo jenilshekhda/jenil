@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		/* Center the loader */
+		#loader {
+		  position: absolute;
+		  left: 50%;
+		  top: 50%;
+		  z-index: 1;
+		  width: 120px;
+		  height: 120px;
+		  margin: -76px 0 0 -76px;
+		  border: 16px solid #f3f3f3;
+		  border-radius: 50%;
+		  border-top: 16px solid #3498db;
+		  -webkit-animation: spin 2s linear infinite;
+		  animation: spin 2s linear infinite;
+		}
+		
+		@-webkit-keyframes spin {
+		  0% { -webkit-transform: rotate(0deg); }
+		  100% { -webkit-transform: rotate(360deg); }
+		}
+		
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
+		
+		/* Add animation to "page content" */
+		.animate-bottom {
+		  position: relative;
+		  -webkit-animation-name: animatebottom;
+		  -webkit-animation-duration: 1s;
+		  animation-name: animatebottom;
+		  animation-duration: 1s
+		}
+		
+		@-webkit-keyframes animatebottom {
+		  from { bottom:-100px; opacity:0 } 
+		  to { bottom:0px; opacity:1 }
+		}
+		
+		@keyframes animatebottom { 
+		  from{ bottom:-100px; opacity:0 } 
+		  to{ bottom:0; opacity:1 }
+		}
+		
+		#myDiv {
+		  display: none;
+		  text-align: center;
+		}
+		</style>
+	<title>div</title>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+	<div id="loader"></div>
+	
+	<div style="display:none;" id="myDiv" class="animate-bottom">
+
+<div style="height:500px;width:100%;background:green;background-image: url('img/106.webp');background-size:cover;margin-top:-34px;">
+	
+
+<div style="height:200px;width:100%">
+	<div style="height:200px;width:50%;float:left;">
+
+		<h1 style="color:green;">earth</h1></div>
+
+		<div style="height:200px;width:50%;float:right;">
+			<a href="webdemos.html" style="text-decoration: none;"><span style="font-size:30px;margin-left:30px;color:green">home</span></a>
+			<a href="webdemospage2.html" style="text-decoration: none;"><span style="font-size:30px;margin-left:30px;color:green">about</span></a>
+			<a href="webdemospage3.html" style="text-decoration: none;"><span style="font-size:30px;margin-left:30px;color:green">services</span></a>
+			<a href="websitedemospage4.html" style="text-decoration: none;"><span style="font-size:30px;margin-left:30px;color:green">contact</span></a></div>
+
+			<center><h1 style="font-size:50px;color:green;">WHO ARE WE?</h1><center>
+
+
+</div>
+</div>
+
+<div style="height:400px;width:100%;margin-top: 20px;">
+	<div style="height:400px;width:50%;float:left"><img src="img/104.webp" style="height:350px;width:80%;margin-left:50px"></div>
+
+    <div style="height:400px;width:50%;float:right">
+
+    	<center><h1>OUR MISSION</h1></center>
+
+    	<center><p style="font-size:24px">Hello, my name is Tyler Moore and with the help of many<br> people I made this template. I made it so it is super easy<br>to update and so that it flows perfectly with my tutorials.<br>Lots of love and hundreds of hours went into making it. I<br>hope you love it as much as I do.</p></center>
+
+    	<center><p style="font-size:24px">I wish you the best of luck with your business, enjoy the<br>adventure.</p></center>
+</div>
+
+</div>
+
+<div style="height:500px;width:100%;background:red ;background-image: url('img/105.webp');background-size:cover;">
+
+	     <center><h1 style="color:green;padding-top:90px">TALK TO US</h1></center>
+
+	     <center><p style="font-size:24px">Have any questions? We are always open to talk about your business,<br>new projects, creative opportunities and how we can help you.</p></center>
+
+         <center><button style="height:35px;background:green;color:white;font-size:30px;border: none;">GET IN TOUCH</button></center>
+
+</div>
+
+ 
+
+    <div style="height:100px;width: 100%;">
+    	<div style="height:100px;width:33.33%;float:left">
+
+    			<a href="webdemos.html"style="text-decoration: none;"><span style="font-size:30px;margin-left:10px;">home</span></a>
+			<a href="webdemospage2.html" style="text-decoration: none;"><span style="font-size:30px;margin-left:10px;">about</span></a>
+			<a href="webdemospage3.html" style="text-decoration: none;"><span style="font-size:30px;margin-left:10px">services</span></a>
+			<a href="websitedemospage4.html" style="text-decoration: none;"><span style="font-size:30px;margin-left:10px;">contact</span></a>
+			</div>
+
+<div style="height:100px;width:33.33%;float:left">
+
+    <center><h3>EARTH</h3></center>
+ </div>
+
+<div style="height:100px;width:33.33%;float:right">
+
+    <center><h3>©2022 Earth. All right reserved.</h3></center>
+
+    </div>
+</div>
+	
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+</body>
+</html>

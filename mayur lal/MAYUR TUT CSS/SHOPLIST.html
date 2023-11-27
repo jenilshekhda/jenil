@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		/* Center the loader */
+		#loader {
+		  /* position: absolute;
+		  left: 50%;
+		  top: 50%;
+		  z-index: 1;
+		  width: 120px;
+		  height: 120px;
+		  margin: -76px 0 0 -76px;
+		  border: 16px solid #f3f3f3;
+		  border-radius: 50%;
+		  border-top: 16px solid #3498db;
+		  -webkit-animation: spin 2s linear infinite;
+		  animation: spin 2s linear infinite; */
+		}
+		
+		@-webkit-keyframes spin {
+		  0% { -webkit-transform: rotate(0deg); }
+		  100% { -webkit-transform: rotate(360deg); }
+		}
+		
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
+		
+		/* Add animation to "page content" */
+		.animate-bottom {
+		  position: relative;
+		  -webkit-animation-name: animatebottom;
+		  -webkit-animation-duration: 1s;
+		  animation-name: animatebottom;
+		  animation-duration: 1s
+		}
+		
+		@-webkit-keyframes animatebottom {
+		  from { bottom:-100px; opacity:0 } 
+		  to { bottom:0px; opacity:1 }
+		}
+		
+		@keyframes animatebottom { 
+		  from{ bottom:-100px; opacity:0 } 
+		  to{ bottom:0; opacity:1 }
+		}
+		
+		#myDiv {
+		  display: none;
+		 
+		}
+
+
+		#page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#h3 {
+  color: rgb(82, 79, 79);
+}
+
+#ring {
+  width: 190px;
+  height: 190px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#ring:nth-child(1) {
+  border-bottom: 8px solid rgb(240, 42, 230);
+  animation: rotate1 2s linear infinite;
+}
+
+@keyframes rotate1 {
+  from {
+    transform: rotateX(50deg) rotateZ(110deg);
+  }
+
+  to {
+    transform: rotateX(50deg) rotateZ(470deg);
+  }
+}
+
+#ring:nth-child(2) {
+  border-bottom: 8px solid rgb(240, 19, 67);
+  animation: rotate2 2s linear infinite;
+}
+
+@keyframes rotate2 {
+  from {
+    transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+  }
+
+  to {
+    transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+  }
+}
+
+#ring:nth-child(3) {
+  border-bottom: 8px solid rgb(3, 170, 170);
+  animation: rotate3 2s linear infinite;
+}
+
+@keyframes rotate3 {
+  from {
+    transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+  }
+
+  to {
+    transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+  }
+}
+
+#ring:nth-child(4) {
+  border-bottom: 8px solid rgb(207, 135, 1);
+  animation: rotate4 2s linear infinite;
+}
+
+@keyframes rotate4 {
+  from {
+    transform: rotateX(70deg) rotateZ(270deg);
+  }
+
+  to {
+    transform: rotateX(70deg) rotateZ(630deg);
+  }
+}
+/* Improving visualization in light mode */
+		</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="mymeg.css">
+
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+	<div id="loader" style="position:relative;top:250px">
+		<div id="page">
+			<div id="container">
+				<div id="ring"></div>
+				<div id="ring"></div>
+				<div id="ring"></div>
+				<div id="ring"></div>
+				<div id="h3">loading</div>
+			</div>
+	</div>
+	</div>
+	
+	<div style="display:none;" id="myDiv" class="animate-bottom">
+
+	<div class="h50 w100">
+
+   	<div class="h50 w80 fl " style="background: #464c4f;">
+   		<i class="fa fa-clock-o font20 pclw mrl100" aria-hidden="true" ></i>
+   		<span style="color:white;">2023-09-19</span>
+   		<i class="fa fa-bolt font20 pclw mrl10" aria-hidden="true"></i>
+   		<span style="color:white;">bapunager,ahmedbad</span>
+    </div>
+
+     <div class="h50 w20 fl" style="background:#464c4f;">
+   		<i class="fa fa-facebook blk font20 mrl10" aria-hidden="true" ></i>
+   		<i class="fa fa-twitter blk font20 mrl10" aria-hidden="true" ></i>
+   		<i class="fa fa-instagram blk font20 mrl10" aria-hidden="true" ></i>
+   	</div>
+</div>
+
+
+
+<div class="h100 w100  ">
+	<div class="h100 w30  fl" >
+   		<img src="1.png" class="mrl100 mt20" >
+     </div>
+
+       <div class="h100 w70 fl">
+   	<a href="index.html">  <span class="blk1  fl font10 mt30 " >HOME</span></a>
+   	<a href="Blog.html">	<span class="blk1 fl font10 mt30 mrl20" >BLOG</span></a>
+   	<a href="SHOPLIST.html">	<span class="blk1 fl font10 mt30 mrl20" >SHOP LIST</span></a>
+   	<a href="ACCOUNT.html">	<span class="blk1 fl font10 mt30 mrl20" >ACCOUNT</span></a>
+   	<a href="CART.html">	<span class="blk1 fl font10 mt30 mrl20" >CART</span></a>
+   	<a href="CHECKOUT.html">	<span class="blk1 fl font10 mt30 mrl20" >CHECKOUT</span></a>
+   		<span class="blk1 fl font10 mt30 mrl20" >DETAIL</span>
+    <a href="ABOUT US.html">   <span class="blk1 fl font10 mt30 mrl20" >ABOUT US</span></a>
+    <a href="CONTACT US.html">  <span class="blk1 fl font10 mt30 mrl20" >CONTACT US</span></a>
+        <i class="fa fa-search blk1 mrl30 mt30" aria-hidden="true"></i>
+       </div>
+
+</div>
+
+<div class="h150 w100" style="background: #464c4f"></div>
+<div class="h50  w100 " style="margin-top: -10px;">
+	
+  <center>
+  	<div class="h20 w10 clw">
+    <span class="font20 blk1 clw"> Home |</span>
+    <span class="font20 blk1 clw">Shop</span>
+  </div>  
+  </center>
+  
+</div>
+
+<!----------1-----line 4img------------>
+<div class="h400 w100 ">
+	<border>
+
+	<div class="h400 w20 mrl100 fl zoom bs">
+		<div class="h200 w100 clgn hide" >
+<img src="39.jpg" width="100%" height="100%" style="transition: 2s;">
+		</div>
+		<span class="pclw font20 salebk pr30" >SALE</span>
+		<center><p class="font20 mt30 ">Building Dozer</p>
+			<span><del>$370.00</del>&nbsp;  $320.00</span><br>
+			<button class="addcart mt10" >Add to cart</button></center></border>
+</div>
+
+
+	<div class="h400 w20 fl zoom mrl20 bs">
+		<div class="h200 w100 fl hide">
+			<img src="40.jpg" width="100%" height="100%" style="transition:2s">
+		</div>
+		<span class="pclw font20 salebk pr30">SALE</span>
+		<button class="pclw mrl160 pr30 font20" style="background:#9c0909">HOT</button>
+		<center><p class="font20 mt30">Bricks</p>
+			<span><del>$370.00</del>&nbsp; $320.00</span><br>
+     <button class="addcart mt10">Add to cart</button>
+		</center>
+	</div>
+
+
+
+
+
+	<div class="h400 w20 fl zoom mrl20 bs">
+		<div class="h200 w100 fl hide">
+			<img src="41.jpg" width="100%" height="100%" style="transition:2s">
+		</div>
+		<span class="pclw font20 salebk pr30">SALE</span>
+	    <center><p class="font20 mt30">Still Cutter</p>
+			<span><del>$370.00</del>&nbsp; $320.00</span><br>
+     <button class="addcart mt10">Add to cart</button>
+		</center>
+	</div>
+
+
+
+	<div class="h400 w20 fl zoom mrl20 bs">
+		<div class="h200 w100 fl hide">
+			<img src="42.jpg" width="100%" height="100%" style="transition:2s">
+		</div>
+		<span class="pclw font20 salebk pr30">SALE</span>
+	    <center><p class="font20 mt30">Elements Carrier</p>
+			<span><del>$370.00</del>&nbsp; $320.00</span><br>
+     <button class="addcart mt10">Add to cart</button>	
+		</center>
+	</div>
+	
+
+<div class="h50 w100"></div>
+<!----------2-----line 4img------------>
+  
+  <div class="h400 w100 ">
+	<border>
+
+	<div class="h400 w20 mrl100 fl zoom bs">
+		<div class="h200 w100 clgn hide" >
+<img src="43.jpg" width="100%" height="100%" style="transition: 2s;">
+		</div>
+		<span class="pclw font20 salebk pr30" >SALE</span>
+		<center><p class="font20 mt30 ">Pipeline Elements</p>
+			<span><del>$370.00</del>&nbsp;  $320.00</span><br>
+			<button class="addcart mt10" >Add to cart</button></center></border>
+</div>
+
+
+	<div class="h400 w20 fl zoom mrl20 bs">
+		<div class="h200 w100 fl hide">
+			<img src="44.jpg" width="100%" height="100%" style="transition:2s">
+		</div>
+		<span class="pclw font20 salebk pr30">SALE</span>
+		<button class="pclw mrl160 pr30 font20" style="background:#9c0909">HOT</button>
+		<center><p class="font20 mt30">Bull Dozer</p>
+			<span><del>$370.00</del>&nbsp; $320.00</span><br>
+     <button class="addcart mt10">Add to cart</button>
+		</center>
+	</div>
+
+
+
+
+
+	<div class="h400 w20 fl zoom mrl20 bs">
+		<div class="h200 w100 fl hide">
+			<img src="45.jpg" width="100%" height="100%" style="transition:2s">
+		</div>
+		<span class="pclw font20 salebk pr30">SALE</span>
+	    <center><p class="font20 mt30">Concrete Vibrator</p>
+			<span><del>$370.00</del>&nbsp; $320.00</span><br>
+     <button class="addcart mt10">Add to cart</button>
+		</center>
+	</div>
+
+
+
+	<div class="h400 w20 fl zoom mrl20 bs">
+		<div class="h200 w100 fl hide">
+			<img src="46.jpg" width="100%" height="100%" style="transition:2s">
+		</div>
+		<span class="pclw font20 salebk pr30">SALE</span>
+	    <center><p class="font20 mt30">Surveying Element</p>
+			<span><del>$370.00</del>&nbsp; $320.00</span><br>
+     <button class="addcart mt10">Add to cart</button>	
+		</center>
+	</div>
+
+
+
+<div class="h100 w100 ">
+	<center>
+	<button class="pagebtn2 mt30 mrl10"><<</button>
+	<button class="pagebtn2 mrl10 btn2">1</button>
+	<button class="pagebtn2 mrl10" style="background: #2e85b8;">2</button>
+	<button class="pagebtn2 mrl10">3</button>
+	<button class="pagebtn2 mrl10">...</button>
+	<button class="pagebtn2 mrl10">10</button>
+	<button class="pagebtn2 mrl10">>></button>
+	</center>
+</div>
+<!-----------------3 last find inst--------->
+<div class="h800 w100 fl " style="background: url(2.png);background-size: cover;background-color: black;">
+   <center>
+      <h1 class="pclw font25">Find Us on Instagram<hr class="w20"></h1>
+   </center>
+   <div class="h200 w90 fl  mrl100">
+      <div class="h200 w15 clb fl" style="background-image: url(33.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(34.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(35.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(36.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(37.jpg);background-size: cover;"></div>
+      <div class="h200 w15 clb fl" style="background-image: url(38.jpg);background-size: cover;"></div>
+   </div>
+   <br>
+
+
+<div class="h500 w30 mt80 fl">
+
+    <h1 class=" font30 mt-20 pclw" style="margin-left: 80px">NewMag</h1>
+    <hr class="w70">
+    <center>
+       <p class="font10 mrl20 pclw">amet, consetetur sadipscing elitr, sed diam nonumy<br> eirmod tempor invidunt ut labore et dolore magna<br> aliquyam erat.</p>
+       
+    </center>
+    <i class="fa fa-facebook-official fl font30 mrl80 mt30 pclw " aria-hidden="true"></i>
+    <i class="fa fa-twitter fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+    <i class="fa fa-instagram fl mrl20 font30 mt30 pclw" aria-hidden="true"></i>
+
+   </div>
+
+
+
+<div class="h500 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Categories</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+
+ </div>
+
+<div class="h500 w20  fl">
+   <h1 class="mrl30 mt50 pclw">Popular Tags</h1>
+   <hr class="w90">
+    <span class="mrl20 pclw">Entertainment</span>
+   <br><br>
+   <span class="mrl20 pclw">Sports</span>
+   <br><br>
+   <span class="mrl20 pclw">Polictics</span>
+   <br><br>
+   <span class="mrl20 pclw">National</span>
+   <br><br>
+   <span class="mrl20 pclw">Blog</span>
+   <br><br>
+</div>
+
+
+
+<div class="h500 w30  fl">
+   <h1 class="mrl30 mt50 pclw">Newsletter</h1>
+   <hr class="w90">
+   <span class="mrl20 pclw">Dont Miss Anything</span>
+   <br><br>
+    <span class="mrl20 pclw">Subscribe to our #newsletter</span>
+   <br><br>
+   <form>
+      <input class="h25 w70 mrl20 fl" type="text" placeholder="Enter Email">
+      <button style="background:red;border:none;color: white;"><i class="fa fa-paper-plane font25" aria-hidden="true"></i></button>
+
+   </form>
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+</body>
+</html>
